@@ -1,4 +1,9 @@
 {
-    "token":"",
-    "chan":""
+    "token": "",
+    "chan": "",
+    "mc": {
+        "pseudo": "MineCord",
+        "host": "localhost",
+        "port": 25565
+    }
 }
