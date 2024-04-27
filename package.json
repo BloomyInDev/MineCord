@@ -1,0 +1,46 @@
+{
+    "name": "minecord",
+    "version": "0.0.1",
+    "description": "A small Discord Bot to chat with Minecraft Servers",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "npm run orm-gen && npm run build:basic",
+        "build:basic": "tsc",
+        "build:minified": "esbuild ./src/index.ts --bundle --platform=node --packages=external --format=esm --outfile=out.js",
+        "start:rebuild": "tsc && node --no-warnings .",
+        "start": "node --no-warnings .",
+        "dev": "tsx watch --no-warnings src/index.ts",
+        "lint": "eslint ./src/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BloomyInDev/MineCord.git"
+    },
+    "keywords": [
+        "discord",
+        "minecraft",
+        "bot",
+        "chat"
+    ],
+    "author": "ByBloomy",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/BloomyInDev/MineCord/issues"
+    },
+    "homepage": "https://github.com/BloomyInDev/MineCord#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.1.1",
+        "esbuild": "^0.20.2",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tsx": "^4.7.3",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^7.7.1"
+    },
+    "dependencies": {
+        "discord-api-types": "^0.37.82",
+        "discord.js": "^14.12.1",
+        "mineflayer": "^4.0.0"
+    }
+}
