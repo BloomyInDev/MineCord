@@ -5,8 +5,7 @@
     "main": "dist/index.js",
     "type": "module",
     "scripts": {
-        "build": "npm run orm-gen && npm run build:basic",
-        "build:basic": "tsc",
+        "build": "tsc",
         "build:minified": "esbuild ./src/index.ts --bundle --platform=node --packages=external --format=esm --outfile=out.js",
         "start:rebuild": "tsc && node --no-warnings .",
         "start": "node --no-warnings .",
